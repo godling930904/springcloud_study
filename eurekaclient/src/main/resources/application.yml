@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://35.194.160.86:8761/eureka
+      defaultZone: http://35.194.160.86:8761/eureka,http://35.194.160.86:8762/eureka,http://35.194.160.86:8763/eureka
     instance:
       hostname: home1
 spring:
