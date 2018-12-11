@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created with 凌神.
@@ -31,4 +31,5 @@ public class ProductServiceImplTest {
         List<ProductInfo> allUp = productService.findAllUp();
         assertTrue(allUp.size() > 0);
     }
+
 }

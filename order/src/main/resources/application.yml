@@ -1,6 +1,8 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://35.194.160.86:8761/eureka,http://35.194.160.86:8762/eureka,http://35.194.160.86:8763/eureka
 spring:
-  application:
-    name: product
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
@@ -36,11 +38,9 @@ spring:
       test-while-idle: true
       time-between-eviction-runs-millis: 60000
       min-evictable-idle-time-millis: 300000
-  jpa:
-    show-sql: true
-eureka:
-  client:
-    service-url:
-      defaultZone: http://35.194.160.86:8761/eureka,http://35.194.160.86:8762/eureka,http://35.194.160.86:8763/eureka
+      jpa:
+        show-sql: true
+  application:
+    name: order_home
 server:
-  port: 8888
+  port: 8099
