@@ -41,6 +41,5 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://35.194.160.86:8761/eureka,http://35.194.160.86:8762/eureka,http://35.194.160.86:8763/eureka
-server:
-  port: 8888
+      defaultZone: http://localhost:8671/eureka,http://localhost:8672/eureka,http://localhost:8673/eureka
+    fetch-registry: false

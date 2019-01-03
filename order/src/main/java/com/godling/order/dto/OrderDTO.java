@@ -1,21 +1,26 @@
-package com.godling.order.entity;
+package com.godling.order.dto;
 
+import com.godling.order.entity.OrderDetail;
+import com.godling.order.entity.OrderMaster;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.util.List;
 
+/**
+ * Created with 凌神.
+ * Description:
+ * User: 87179
+ * Date: 2018-12-29
+ * Time: 21:08
+ */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class OrderMaster {
+@AllArgsConstructor
+public class OrderDTO {
 
-    @Id
     private String orderId;
 
     /**
@@ -46,23 +51,17 @@ public class OrderMaster {
     /**
      * 订单状态, 默认为新下单
      */
-    private Integer orderStatus;
+    private Byte orderStatus;
 
     /**
      * 支付状态, 默认未支付
      */
-    private Integer payStatus;
+    private Byte payStatus;
+
 
     /**
-     * 创建时间
+     * 订单详情
      */
-    private Date createTime;
-
-    /**
-     * 修改时间
-     */
-    private Date updateTime;
-
+    private List<OrderDetail> detailList;
 
 }
-
